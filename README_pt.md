@@ -12,6 +12,8 @@ Aceleração de carreira da [Avanade](https://www.avanade.com) em parceria com a
 
 ![Preview](https://media.giphy.com/media/mggNxTLWbZXOvzreL8/giphy.gif)
 
+Este projeto tem como objetivo, aplicar conceitos de Angular, aprendidos no Treinamento de Aceleração de Carreira. Este é um SPA simples que utiliza um serviço de captura de informações de usuários do Github, trabalhando com Angular Material e integrado com meus componentes.
+
 ## Install
 
 ```bash
