@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{userData.name?userData.name:userData.login}}</mat-card-title>
+    <mat-card-subtitle *ngIf="userData.bio">{{userData.bio}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src={{userData.avatar_url}} alt="Profile">
+  <mat-card-content>
+    <p>Repositórios: {{userData.public_repos}}</p>
+  </mat-card-content>
+</mat-card>

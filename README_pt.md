@@ -6,10 +6,9 @@
 <a href="README_pt.md">
     <img src="https://img.shields.io/badge/README-PT-green?color=blue&label=README" alt="README PT-BR" />
 </a>
-
 <img src="https://img.shields.io/badge/Autor-Douglas%20Walas-green?color=green&label=Autor&style=flat-square" alt="Repository Author"/>
 
-Career acceleration from [Avanade](https://www.avanade.com) with [Digital Innovation One](https://digitalinnovation.one/)
+Aceleração de carreira da [Avanade](https://www.avanade.com) em parceria com a [Digital Innovation One](https://digitalinnovation.one/)
 
 ![Preview](https://media.giphy.com/media/mggNxTLWbZXOvzreL8/giphy.gif)
 
@@ -31,14 +30,14 @@ Career acceleration from [Avanade](https://www.avanade.com) with [Digital Innova
 
 Douglas Walas – [Linkedin](https://www.linkedin.com/in/douglaswalas/)
 
-Distributed under the MIT license. See [LICENSE](LICENSE) for more informations.
+Distribuído sob a licença MIT. Veja [LICENSE](LICENSE) para mais informações.
 
 [https://github.com/DWRP](https://github.com/DWRP/)
 
 ## Contributing
 
-1. Make _fork_ of project (<https://github.com/DWRP/happy/fork>)
-2. Create a _branch_ for your change (`git checkout -b feature/fooBar`)
-3. Make the _commit_ (`git commit -am 'Add some fooBar'`)
+1. Faça o _fork_ do projeto (<https://github.com/DWRP/global_dev_avanade/fork>)
+2. Crie uma _branch_ para sua modificação (`git checkout -b feature/fooBar`)
+3. Faça o _commit_ (`git commit -am 'Add some fooBar'`)
 4. _Push_ (`git push origin feature/fooBar`)
-5. Create a new _Pull Request_
+5. Crie um novo _Pull Request_

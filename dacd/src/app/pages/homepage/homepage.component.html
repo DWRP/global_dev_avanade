@@ -1,0 +1,30 @@
+<div class="container">
+  <dacd-header></dacd-header>
+
+  <div class="content">
+    <div class="sideL">
+      <h1>GITHUB PERFIL SEARCH</h1>
+
+      <div class="input-user">
+
+        <mat-form-field>
+          <mat-label>GITHUB USER</mat-label>
+          <textarea matInput placeholder="Ex. DWRP..." (focus)="nullUser = false" (keyup)="errorLoad = false" (keyup)="changeUser($event)" required></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="username?user='':''"  (click)="loadData()">SEARCH</button>
+      </div>
+      <div class="usererror" *ngIf="nullUser">
+        Usuário é obrigatório!!
+      </div>
+    </div>
+    <div class="sideR" >
+      <dacd-user-content *ngIf="user" [userData]="user"></dacd-user-content>
+      <div *ngIf="user!==undefined && !user">
+        <mat-spinner></mat-spinner>
+      </div>
+      <div *ngIf="errorLoad">Desculpe, ocorreu algum erro durante a requisição.</div>
+    </div>
+  </div>
+
+  <dacd-footer></dacd-footer>
+</div>
