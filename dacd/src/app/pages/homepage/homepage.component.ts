@@ -14,11 +14,23 @@ export class HomepageComponent implements OnInit {
   username: string = ''
   errorLoad: boolean = false
   nullUser: boolean = false
+  favs:any = []
+  lastUser:string = ''
 
   ngOnInit(): void {
+    let fav = window.localStorage.getItem('favs')
+    if(fav){
+      this.favs = fav.split(',')
+    }
+  }
+
+  resetInfos(){
+    this.nullUser = false
+    this.errorLoad = false
   }
 
   changeUser(event: KeyboardEvent){
+
     if((event.target as HTMLInputElement).value !== '\n'){
       this.username = (event.target as HTMLInputElement).value
     }else{
@@ -27,12 +39,35 @@ export class HomepageComponent implements OnInit {
     }
   }
 
+  searchFav(event: any){
+    this.username = event.target.value?event.target.value:''
+    this.loadData()
+  }
 
+  removeFav(event: any){
+    this.favs = this.favs.filter((item:string)=>item !== event.target.value)
+  }
+
+  addFav(){
+    this.favs.push(this.username)
+    window.localStorage.setItem('favs',this.favs.join(','))
+  }
+
+  userInFav(){
+    if(this.favs){
+      if(this.favs.includes(this.lastUser)){
+        return false
+      }
+    }
+    return true
+  }
   loadData(){
+    this.lastUser = this.username
     if(this.username){
       this.api.loadData(this.username).subscribe(data =>this.user = data,err=>{
         this.errorLoad = true
         this.user = undefined
+
       })
     }else{
       this.nullUser = true
