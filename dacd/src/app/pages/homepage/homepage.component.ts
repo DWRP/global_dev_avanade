@@ -38,6 +38,12 @@ export class HomepageComponent implements OnInit {
       this.loadData()
     }
   }
+  hasFavorites(){
+    if(this.favs.length > 0){
+      return true
+    }
+    return false
+  }
 
   searchFav(event: any){
     this.username = event.target.value?event.target.value:''
@@ -46,6 +52,7 @@ export class HomepageComponent implements OnInit {
 
   removeFav(event: any){
     this.favs = this.favs.filter((item:string)=>item !== event.target.value)
+    window.localStorage.setItem('favs',this.favs.join(','))
   }
 
   addFav(){

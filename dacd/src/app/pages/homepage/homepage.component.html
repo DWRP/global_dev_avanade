@@ -13,18 +13,22 @@
         </mat-form-field>
         <button mat-raised-button color="primary" (click)="username?user='':''"  (click)="loadData()">SEARCH</button>
       </div>
+
       <div class="usererror" *ngIf="nullUser">
         Usuário é obrigatório!!
       </div>
-      <div class="favorites">
-      <h1>FAVORITOS</h1>
-      <div class="favList">
-        <div *ngFor="let item of favs">
-          <button [value]="item" (click)="username?user='':''" (click)="searchFav($event)" >{{item}}</button>
-          <button [value]="item" (click)="removeFav($event)" >DEL</button>
+
+      <div *ngIf="hasFavorites()" class="favorites">
+        <h1>FAVORITOS</h1>
+
+        <div class="favList">
+          <div *ngFor="let item of favs">
+            <button [value]="item" (click)="username?user='':''" (click)="searchFav($event)" >{{item}}</button>
+            <button [value]="item" (click)="removeFav($event)" >DEL</button>
+          </div>
         </div>
       </div>
-    </div>
+
     </div>
     <div class="sideR" >
       <dacd-user-content *ngIf="user" [userData]="user"></dacd-user-content>
@@ -37,8 +41,10 @@
       <div *ngIf="user!==undefined && !user">
         <mat-spinner></mat-spinner>
       </div>
+
       <div *ngIf="errorLoad">Desculpe, ocorreu algum erro durante a requisição.</div>
     </div>
+
   </div>
 
   <dacd-footer></dacd-footer>

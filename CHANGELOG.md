@@ -4,6 +4,9 @@ Versions history changes register
 
 ## Version History
 
+* 1.1.1
+  * FIX: Favorites show if null
+
 * 1.1.0
   * ADD: Favorites feature
 
@@ -11,4 +14,4 @@ Versions history changes register
   * ADD: README informations of project
 
 * 1.0.0
-  * Project conclueded 
+  * Project conclueded
