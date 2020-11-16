@@ -28,6 +28,13 @@ This project has with target, apply concepts of Angular, learned in Acceleration
     ng serve -o
 ```
 
+## Technologies
+
+* [Node.js](https://nodejs.org/en/)
+* [Angular](https://angular.io/)
+* [Angular Material](https://material.angular.io/)
+* [Typescript](https://www.typescriptlang.org/)
+
 ## Meta
 
 Douglas Walas – [Linkedin](https://www.linkedin.com/in/douglaswalas/)

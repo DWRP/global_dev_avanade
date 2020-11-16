@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'dacd-user-content',
@@ -7,12 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UserContentComponent implements OnInit {
 
+  @Input() userInFav = false
+
   constructor() { }
 
   ngOnInit(): void {
-
+    
   }
-
+  
+  @Output() favorite = new EventEmitter()
+  
   @Input() userData: {
     id: number | null,
     login: string,
@@ -27,5 +31,9 @@ export class UserContentComponent implements OnInit {
     bio: '',
     avatar_url: '',
     public_repos:''
+  }
+  
+  addFav(){
+    this.favorite.emit()
   }
 }

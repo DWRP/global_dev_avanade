@@ -30,8 +30,8 @@ export class HomepageComponent implements OnInit {
   }
 
   changeUser(event: KeyboardEvent){
-
-    if((event.target as HTMLInputElement).value !== '\n'){
+    console.log((event.target as HTMLInputElement).value)
+    if(!(event.target as HTMLInputElement).value.includes('\n')){
       this.username = (event.target as HTMLInputElement).value
     }else{
       (event.target as HTMLInputElement).value = (event.target as HTMLInputElement).value.replace('\n','')
@@ -46,6 +46,7 @@ export class HomepageComponent implements OnInit {
   }
 
   searchFav(event: any){
+    console.log(event)
     this.username = event.target.value?event.target.value:''
     this.loadData()
   }

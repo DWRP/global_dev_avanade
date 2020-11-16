@@ -1,0 +1,7 @@
+<h1>FAVORITOS</h1>
+<div class="favList">
+    <div *ngFor="let item of favs">
+    <button [value]="item" (click)="searchFav($event)" >{{item}}</button>
+    <button [value]="item" (click)="removeFav($event)" >DEL</button>
+    </div>
+</div>
