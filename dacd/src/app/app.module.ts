@@ -15,7 +15,6 @@ import { UserContentComponent } from './components/user-content/user-content.com
 
 // @My Services
 import { HttpClientModule } from '@angular/common/http';
-import { ApiService } from './services/api.service';
 
 // @Angular Material
 import { MatInputModule } from '@angular/material/input';
@@ -45,7 +44,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
     MatProgressSpinnerModule,
     MatIconModule
   ],
-  providers: [ApiService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

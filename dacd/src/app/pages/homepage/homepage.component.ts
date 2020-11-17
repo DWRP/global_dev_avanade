@@ -35,6 +35,7 @@ export class HomepageComponent implements OnInit {
       this.username = (event.target as HTMLInputElement).value
     }else{
       (event.target as HTMLInputElement).value = (event.target as HTMLInputElement).value.replace('\n','')
+      this.user = ''
       this.loadData()
     }
   }

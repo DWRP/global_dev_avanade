@@ -4,6 +4,10 @@ Versions history changes register
 
 ## Version History
 
+* 1.2.1
+  * CHANGED: Layout from `card content` and button
+  * FIX: Logics bugs and layout errors.
+
 * 1.2.0
   * ADD: New component `favorites` and use `@Angular/core/Output`
   * CHANGED: Refatoring homepage and components

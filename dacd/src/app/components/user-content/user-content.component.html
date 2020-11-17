@@ -4,7 +4,7 @@
     <mat-card-subtitle *ngIf="userData.bio">{{userData.bio}}</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image src={{userData.avatar_url}} alt="Profile">
-  <mat-card-content>
+  <mat-card-content class="card-content">
     <p>Repositórios: {{userData.public_repos}}</p>
     <button *ngIf="userInFav && userData" class="favButton" (click)="addFav()">
       <mat-icon color="warn">favorite</mat-icon>

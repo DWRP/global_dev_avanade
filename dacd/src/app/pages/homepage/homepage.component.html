@@ -27,9 +27,9 @@
       <dacd-favorites 
         [favs]="favs" 
         *ngIf="hasFavorites()" 
-        class="favorites" 
-        (search)="username?user='':''" 
+        class="favorites"
         (search)="searchFav($event)" 
+        (search)="username?user='':''" 
         (remove)="removeFav($event)"
       >
       </dacd-favorites>
